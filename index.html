@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awesome Apparel — Feel Good. Look Awesome.</title>
+  <meta name="description" content="Modern, sustainable clothing. Discover tees, hoodies, and accessories that look awesome and feel great." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Awesome Apparel" />
+  <meta property="og:description" content="Modern, sustainable clothing for everyday life." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/icons/logo.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="#" aria-label="Awesome Apparel home">
+        <img src="assets/icons/logo.png" alt="Awesome Apparel logo" class="logo-img" />
+        <span class="brand-name">Awesome Apparel</span>
+      </a>
+      <nav class="nav">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" aria-label="Open cart" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <h1>Feel Good. Look Awesome.</h1>
+        <p>Premium basics and bold drops designed for everyday comfort—crafted with sustainable materials.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#shop">Shop New Arrivals</a>
+          <a class="btn" href="#about">Learn More</a>
+        </div>
+      </div>
+      <img class="hero-image" src="assets/images/hero-placeholder.jpg" alt="Models wearing Awesome Apparel" />
+    </div>
+  </section>
+
+  <main>
+    <section id="shop" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <p>Hand-picked essentials for your weekly rotation.</p>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container two-col">
+        <div>
+          <h2>About Awesome Apparel</h2>
+          <p>We started Awesome Apparel to make everyday dressing simple: fewer, better pieces that go the distance. From fabric selection to finishing, we obsess over details so you can focus on living your life.</p>
+          <ul class="checklist">
+            <li>Timeless designs that mix & match</li>
+            <li>Comfort-first fit and feel</li>
+            <li>Responsible sourcing & fair labor</li>
+          </ul>
+        </div>
+        <div>
+          <img class="media" src="assets/images/about-placeholder.jpg" alt="Cut & sew details" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sustainability" class="section">
+      <div class="container two-col">
+        <div>
+          <img class="media" src="assets/images/sustainability-placeholder.jpg" alt="Organic cotton fields" />
+        </div>
+        <div>
+          <h2>Sustainability, Without Compromise</h2>
+          <p>We're committed to reducing our footprint across the full lifecycle—from materials to packaging. We source organic cotton, recycled poly, and employ water-saving dye techniques.</p>
+          <div class="stats">
+            <div class="stat"><span class="big">70%</span> sustainable materials</div>
+            <div class="stat"><span class="big">50%</span> less water used</div>
+            <div class="stat"><span class="big">100%</span> recyclable packaging</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Join the Crew</h2>
+          <p>Get early access to drops, restocks, and exclusive offers.</p>
+        </div>
+        <form class="newsletter" onsubmit="subscribe(event)">
+          <input type="email" id="email" placeholder="Enter your email" required aria-label="Email address" />
+          <button class="btn primary" type="submit">Subscribe</button>
+          <p id="newsletter-msg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/icons/logo.png" alt="Awesome Apparel logo" class="logo-img small" />
+          <h3>Awesome Apparel</h3>
+        </div>
+        <p>Modern, sustainable clothing for everyday life.</p>
+        <p class="small">© <span id="year"></span> Awesome Apparel. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-list">
+          <li>Mobile: <a href="tel:+639602843975">0960 284 3975</a></li>
+          <li>Email: <a href="mailto:support@awesomeapparel.example">support@awesomeapparel.example</a></li>
+        </ul>
+        <div class="qr">
+          <img src="assets/icons/facebook-qr.png" alt="Scan the QR to open our Facebook page" class="qr-img" />
+          <div class="small">Scan to visit our Facebook page</div>
+          <div class="small"><a href="https://www.facebook.com/awesomeapparel19" target="_blank" rel="noopener">Or tap here</a></div>
+        </div>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul class="foot-list">
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="btn icon" aria-label="Close cart" onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="cart-total">$0.00</span></div>
+      <button class="btn primary" onclick="checkout()">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
